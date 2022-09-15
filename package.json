@@ -15,7 +15,9 @@
     "start:backend": "npm --prefix ./backend start",
     "start:client": "npm --prefix ./client start",
     "start:dev": "npx concurrently 'npm run start:dev --prefix ./backend' 'npm start --prefix ./client'",
-    "test": "npm run test:client && npm run test:backend"
+    "test": "npm run test:client && npm run test:backend",
+    "deploy:backend": "git subtree push --prefix backend heroku-backend main",
+    "deploy:client": "git subtree push --prefix client heroku-client main"
   },
   "keywords": [],
   "author": "Thinkful, Inc.",
