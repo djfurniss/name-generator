@@ -12,8 +12,11 @@ const App = () => {
   
   const clickHandler = (event) => {
     fetch('https://intense-island-24747.herokuapp.com/generate')
-    .then((res) => res.json())
-    .then((nme) => setName([nme]))
+    // fetch("localhost:5001/generate")
+    // .then((res) => res.json())
+    .then((nme) => console.log(nme))
+    .catch(console.log)
+    // .then((nme) => setName([nme]))
   };
 
   return (
