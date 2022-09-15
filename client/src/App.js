@@ -11,9 +11,10 @@ const App = () => {
   // }, [])
   
   const clickHandler = (event) => {
-    fetch('https://intense-island-24747.herokuapp.com/generate')
+    // fetch('https://intense-island-24747.herokuapp.com/generate')
+    fetch('https://jsonplaceholder.typicode.com/albums/')
     .then((res) => res.json())
-    .then((nme) => setName(nme.test))
+    .then((nme) => setName(nme[Math.floor(Math.random() * nme.length)].title))
     // .catch(console.log)
     // .then((nme) => setName([nme]))
   };
